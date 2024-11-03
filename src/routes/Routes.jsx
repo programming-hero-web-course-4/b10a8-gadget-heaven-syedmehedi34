@@ -18,8 +18,13 @@ const routes = createBrowserRouter([
         children: [
           {
             path: "/",
-            loader: () => fetch("/products.json"),
+            loader: () => fetch("../products.json"),
             element: <ProductContainer></ProductContainer>,
+          },
+          {
+            path: "/category/:category",
+            element: <ProductContainer></ProductContainer>,
+            loader: () => fetch("../products.json"),
           },
         ],
       },

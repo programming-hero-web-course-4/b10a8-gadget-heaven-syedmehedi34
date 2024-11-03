@@ -1,0 +1,146 @@
+[
+  {
+    "product_id": "P001",
+    "product_title": "Gaming Laptop",
+    "product_image": "https://i.ibb.co.com/HN20vm0/1.jpg",
+    "category": "Laptop",
+    "price": 1299.99,
+    "description": "High-performance gaming laptop with dedicated graphics card.",
+    "specification": [
+      "Intel Core i7",
+      "16GB RAM",
+      "1TB SSD",
+      "NVIDIA GTX 3060"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P002",
+    "product_title": "Smartphone X",
+    "product_image": "https://i.ibb.co.com/wJrPMrK/2.jpg",
+    "category": "Phone",
+    "price": 699.99,
+    "description": "Latest smartphone with stunning camera and fast processor.",
+    "specification": [
+      "6.5-inch AMOLED display",
+      "128GB storage",
+      "5G support",
+      "Quad-camera system"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P003",
+    "product_title": "Wireless Earbuds",
+    "product_image": "https://i.ibb.co.com/4jDMYp3/3.jpg",
+    "category": "Accessories",
+    "price": 49.99,
+    "description": "Compact wireless earbuds with noise cancellation and long battery life.",
+    "specification": [
+      "Bluetooth 5.0",
+      "Noise cancellation",
+      "Up to 20 hours battery",
+      "Water-resistant"
+    ],
+    "availability": false,
+    "rating": 4.2
+  },
+  {
+    "product_id": "P004",
+    "product_title": "Bluetooth Speaker",
+    "product_image": "https://i.ibb.co.com/MVGzTkn/4.jpg",
+    "category": "Accessories",
+    "price": 29.99,
+    "description": "Portable Bluetooth speaker with impressive bass.",
+    "specification": [
+      "10-hour battery life",
+      "Waterproof",
+      "Bluetooth 4.2",
+      "Built-in microphone"
+    ],
+    "availability": false,
+    "rating": 4.3
+  },
+  {
+    "product_id": "P005",
+    "product_title": "Smartwatch Series 5",
+    "product_image": "https://i.ibb.co.com/5vcqSx3/5.jpg",
+    "category": "Smartwatch",
+    "price": 249.99,
+    "description": "Stylish smartwatch with health tracking and notifications.",
+    "specification": [
+      "Heart rate monitor",
+      "GPS tracking",
+      "Water-resistant up to 50m",
+      "Battery life up to 7 days"
+    ],
+    "availability": true,
+    "rating": 4.0
+  },
+  {
+    "product_id": "P006",
+    "product_title": "MacBook Pro 16\"",
+    "product_image": "https://i.ibb.co.com/jVgCYLr/6.jpg",
+    "category": "MacBook",
+    "price": 2399.99,
+    "description": "Apple MacBook Pro with M1 chip, 16-inch Retina display.",
+    "specification": [
+      "Apple M1 chip",
+      "16GB RAM",
+      "512GB SSD",
+      "16-inch Retina display"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P007",
+    "product_title": "iPhone 13 Pro",
+    "product_image": "https://i.ibb.co.com/mqhK7Xs/7.jpg",
+    "category": "iPhone",
+    "price": 999.99,
+    "description": "Apple iPhone 13 Pro with ProMotion display and advanced camera system.",
+    "specification": [
+      "6.1-inch Super Retina XDR display",
+      "128GB storage",
+      "5G enabled",
+      "Triple-camera system"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P008",
+    "product_title": "Laptop Stand",
+    "product_image": "https://i.ibb.co.com/TP1BGWB/8.jpg",
+    "category": "Accessories",
+    "price": 19.99,
+    "description": "Adjustable laptop stand for comfortable viewing and typing.",
+    "specification": [
+      "Aluminum construction",
+      "Adjustable height",
+      "Fits laptops up to 17 inches",
+      "Non-slip pads"
+    ],
+    "availability": true,
+    "rating": 4.3
+  },
+  {
+    "product_id": "P009",
+    "product_title": "iPhone Charging Dock",
+    "product_image": "https://i.ibb.co.com/ZxfMMNT/9.jpg",
+    "category": "Accessories",
+    "price": 14.99,
+    "description": "Convenient charging dock for iPhone with sturdy base.",
+    "specification": [
+      "Fast charging support",
+      "Non-slip base",
+      "Compatible with iPhone 8 and later",
+      "Compact design"
+    ],
+    "availability": true,
+    "rating": 4.1
+  }
+]

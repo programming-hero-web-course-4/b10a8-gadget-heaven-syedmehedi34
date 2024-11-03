@@ -25,9 +25,13 @@ const ProductContainer = () => {
   return (
     <div>
       <div className="grid grid-cols-3 gap-6 mb-20">
-        {products.map((product) => (
-          <Product key={product.product_id} product={product}></Product>
-        ))}
+        {products && products.length > 0 ? (
+          products.map((product) => (
+            <Product key={product.product_id} product={product} />
+          ))
+        ) : (
+          <p>No products available.</p>
+        )}
       </div>
     </div>
   );

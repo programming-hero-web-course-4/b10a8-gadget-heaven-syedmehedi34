@@ -21,5 +21,15 @@ export default {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui"),
+    function ({ addComponents }) {
+      addComponents({
+        ".click": {
+          "@apply transform transition-transform duration-150 ease-in-out hover:scale-105 active:scale-95":
+            {},
+        },
+      });
+    },
+  ],
 };

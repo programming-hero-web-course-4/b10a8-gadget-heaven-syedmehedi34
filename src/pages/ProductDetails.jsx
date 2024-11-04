@@ -5,6 +5,10 @@ import { CiHeart } from "react-icons/ci";
 import { useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import Heaven from "../components/Heaven";
+import {
+  addCartToLocalStorage,
+  addWishlistToLocalStorage,
+} from "../utils/LocalStorage";
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -14,6 +18,16 @@ const ProductDetails = () => {
     const singleData = data.find((product) => product.product_id == productId);
     setProduct(singleData);
   }, [data, productId]);
+
+  // onClick button
+  // const [] = useState();
+  const handleAddToCart = (product) => {
+    // console.log(product);
+    addCartToLocalStorage(product);
+  };
+  const addToWishlist = (product) => {
+    addWishlistToLocalStorage(product);
+  };
 
   return (
     <div className="">
@@ -94,16 +108,22 @@ const ProductDetails = () => {
                 </p>
               </div>
             </div>
+
             <div className="mt-4 flex items-center gap-5">
-              <Link>
-                <div className="flex items-center gap-2 bg-primary text-white btn w-fit rounded-[32px]">
-                  <p className=" font-bold">Add To Cart</p>
-                  <IoCartOutline size={25} />
-                </div>
-              </Link>
-              <p className="btn btn-circle border border-[#0B0B0B1A] bg-white min-h-4 h-12 w-12 font-bold">
+              <button
+                onClick={() => handleAddToCart(product)}
+                className="flex items-center gap-2 bg-primary text-white btn w-fit rounded-[32px]"
+              >
+                <p className=" font-bold">Add To Cart</p>
+                <IoCartOutline size={25} />
+              </button>
+
+              <button
+                onClick={() => addToWishlist(product)}
+                className="btn btn-circle border border-[#0B0B0B1A] bg-white min-h-4 h-12 w-12 font-bold"
+              >
                 <CiHeart size={25} />
-              </p>
+              </button>
             </div>
           </div>
         </div>

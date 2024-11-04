@@ -6,7 +6,7 @@ const Blogs = () => {
       <Helmet>
         <title>Blogs -Gadget Heaven</title>
       </Helmet>
-      <h1>Blogs page</h1>
+      <h1>Blogs page here</h1>
     </div>
   );
 };

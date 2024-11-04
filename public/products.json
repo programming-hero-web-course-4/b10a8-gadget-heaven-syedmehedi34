@@ -14,7 +14,7 @@
       "NVIDIA GTX 3060"
     ],
     "availability": true,
-    "rating": 4.7
+    "rating": 4
   },
   {
     "product_id": "P002",
@@ -31,7 +31,7 @@
       "Quad-camera system"
     ],
     "availability": true,
-    "rating": 4.6
+    "rating": 5
   },
   {
     "product_id": "P003",
@@ -48,7 +48,7 @@
       "Water-resistant"
     ],
     "availability": false,
-    "rating": 4.2
+    "rating": 3
   },
   {
     "product_id": "P004",
@@ -65,7 +65,7 @@
       "Built-in microphone"
     ],
     "availability": false,
-    "rating": 4.3
+    "rating": 4
   },
   {
     "product_id": "P005",
@@ -82,7 +82,7 @@
       "Battery life up to 7 days"
     ],
     "availability": true,
-    "rating": 4.0
+    "rating": 4
   },
   {
     "product_id": "P006",
@@ -99,7 +99,7 @@
       "16-inch Retina display"
     ],
     "availability": true,
-    "rating": 4.8
+    "rating": 5
   },
   {
     "product_id": "P008",
@@ -116,7 +116,7 @@
       "Non-slip pads"
     ],
     "availability": true,
-    "rating": 4.3
+    "rating": 2
   },
   {
     "product_id": "P009",
@@ -133,6 +133,6 @@
       "Compact design"
     ],
     "availability": true,
-    "rating": 4.1
+    "rating": 3
   }
 ]

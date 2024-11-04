@@ -11,6 +11,7 @@ import {
 } from "../utils/LocalStorage";
 import { NavContext } from "../layouts/Layout";
 import { Helmet } from "react-helmet-async";
+import { Rating } from "@smastrom/react-rating";
 
 const ProductDetails = () => {
   const [isWish, setIsWish] = useState(false);
@@ -101,10 +102,10 @@ const ProductDetails = () => {
               </ul>
             </div>
 
-            <div>
-              <p className="text-textOF font-bold">Rating : {product.rating}</p>
+            <div className="flex items-center gap-5">
+              <p className="text-textOF font-bold">Rating : </p>
               <div className="flex items-center gap-5 ">
-                <div className="rating">
+                {/* <div className="rating">
                   <input
                     type="radio"
                     name="rating-2"
@@ -131,8 +132,9 @@ const ProductDetails = () => {
                     name="rating-2"
                     className="mask mask-star-2 bg-orange-400"
                   />
-                </div>
-                <p className="bg-[#09080F0D] px-2 py-1 rounded-full text-sm">
+                </div> */}
+                <Rating style={{ maxWidth: 150 }} value={product.rating} />
+                <p className="bg-[#09080F0D] px-4 py-1 rounded-full ">
                   {product.rating}
                 </p>
               </div>

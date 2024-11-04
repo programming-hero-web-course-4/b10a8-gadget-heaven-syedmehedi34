@@ -1,8 +1,32 @@
 import { HiShoppingCart } from "react-icons/hi";
 import { FaHeart } from "react-icons/fa6";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { getAllCarts, getAllWishlist } from "../utils/LocalStorage";
+import { useContext, useEffect, useState } from "react";
+import { NavContext } from "../layouts/Layout";
 
 const Navbar = () => {
+  // context api
+  const clicked = useContext(NavContext);
+  console.log(clicked.clicked);
+  // contextFunction();
+  //
+  const [cart, setCart] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
+
+  // Function to refresh data manually
+  // const refreshData = () => {
+  //   setCart(getAllCarts());
+  //   setWishlist(getAllWishlist());
+  // };
+
+  useEffect(() => {
+    setCart(getAllCarts());
+    setWishlist(getAllWishlist());
+  }, [clicked]);
+
+  // console.log(cart.length);
+  //
   const navItems = (
     <>
       <li>
@@ -81,13 +105,28 @@ const Navbar = () => {
           >
             <ul className="menu menu-horizontal px-1">{navItems}</ul>
           </div>
-          <div className="navbar-end gap-2">
-            <p className="btn btn-circle border border-[#0B0B0B1A] bg-white min-h-4 h-10 w-10">
-              <HiShoppingCart />
-            </p>
-            <p className="btn btn-circle border border-[#0B0B0B1A] bg-white min-h-4 h-10 w-10">
-              <FaHeart />
-            </p>
+          <div className="navbar-end gap-3">
+            {/* cart nav  */}
+            <div className="relative btn btn-circle border border-[#0B0B0B1A] bg-white min-h-4 h-10 w-10">
+              <p>
+                <HiShoppingCart />
+              </p>
+              <span className="absolute -top-2 -right-3 badge text-red-400">
+                {cart.length}
+              </span>
+            </div>
+            {/* cart nav  */}
+
+            {/* wishlist nav  */}
+            <div className="relative btn btn-circle border border-[#0B0B0B1A] bg-white min-h-4 h-10 w-10">
+              <p>
+                <FaHeart />
+              </p>
+              <span className="absolute -top-2 -right-3 badge text-red-400">
+                {wishlist.length}
+              </span>
+            </div>
+            {/* wishlist nav  */}
           </div>
         </div>
       </div>

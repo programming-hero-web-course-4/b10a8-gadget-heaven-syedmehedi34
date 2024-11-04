@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { BiSort } from "react-icons/bi";
 import { getAllCarts, removeCarts } from "../utils/LocalStorage";
 import { MdDelete } from "react-icons/md";
+import { NavContext } from "../layouts/Layout";
 
 const Carts = () => {
+  const { navFunction } = useContext(NavContext);
+
   const [carts, setCarts] = useState([]);
   useEffect(() => {
     const cart = getAllCarts();
@@ -60,7 +63,10 @@ const Carts = () => {
             </div>
 
             <div
-              onClick={() => handleRemove(cart.product_id)}
+              onClick={() => {
+                handleRemove(cart.product_id);
+                navFunction();
+              }}
               className="btn btn-circle bg-inherit border-none"
             >
               <MdDelete size={22}></MdDelete>
@@ -68,16 +74,28 @@ const Carts = () => {
           </div>
         ))}
       </div>
-      <dialog id="my_modal_1" className="modal">
+      <dialog id="my_modal_1" className="modal max-w-96 mx-auto">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">Hello!</h3>
-          <p className="py-4">
-            Press ESC key or click the button below to close
-          </p>
-          <div className="modal-action">
-            <form method="dialog">
+          <div className="flex flex-col items-center justify-center">
+            <div>
+              <img className="w-12 h-12" src="/assets/modal_img.png" alt="" />
+            </div>
+            <h2 className="text-2xl font-bold text-textOF mt-5 text-center">
+              Payment Successful
+            </h2>
+            <div className="divider my-2"></div>
+            <p className="mb-1 text-textOF60 font-[500] text-center">
+              Thanks for purchasing.
+            </p>
+            <p className=" text-textOF60 font-[500] text-center">
+              Total: 2449.96
+            </p>
+          </div>
+
+          <div className="modal-action w-full">
+            <form method="dialog" className="w-full">
               {/* if there is a button in form, it will close the modal */}
-              <button className="btn">Close</button>
+              <button className="btn rounded-[32px] w-full">Close</button>
             </form>
           </div>
         </div>

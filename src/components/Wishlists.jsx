@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { getAllWishlist, removeWishlist } from "../utils/LocalStorage";
 import { MdDelete } from "react-icons/md";
+import { NavContext } from "../layouts/Layout";
 
 const Wishlists = () => {
+  const { navFunction } = useContext(NavContext);
+
   const [wishlists, setWishlists] = useState([]);
   useEffect(() => {
     const wishlist = getAllWishlist();
@@ -47,7 +50,10 @@ const Wishlists = () => {
             </div>
 
             <div
-              onClick={() => handleRemove(wishlist.product_id)}
+              onClick={() => {
+                navFunction();
+                handleRemove(wishlist.product_id);
+              }}
               className="btn btn-circle bg-inherit border-none"
             >
               <MdDelete size={22}></MdDelete>

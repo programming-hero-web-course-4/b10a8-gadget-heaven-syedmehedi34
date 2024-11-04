@@ -2,14 +2,24 @@
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 
-import { useEffect, useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
 import {
   addCartToLocalStorage,
   addWishlistToLocalStorage,
 } from "../utils/LocalStorage";
+import { NavContext } from "../layouts/Layout";
 
 const ProductDetails = () => {
+  // context
+  const { navFunction } = useContext(NavContext);
+  // console.log(navFunction);
+  // const handleClick = () => {
+  //   // Call the function from context
+  //   navFunction();
+  // };
+
+  //
   const { productId } = useParams();
   const data = useLoaderData();
   const [product, setProduct] = useState([]);
@@ -28,6 +38,8 @@ const ProductDetails = () => {
     addWishlistToLocalStorage(product);
   };
 
+  //
+  //
   return (
     <div className="">
       <div className="text-center pt-8 pb-64 bg-primary">
@@ -115,16 +127,24 @@ const ProductDetails = () => {
             </div>
 
             <div className="mt-4 flex items-center gap-5">
+              {/* Cart button  */}
               <button
-                onClick={() => handleAddToCart(product)}
+                onClick={() => {
+                  handleAddToCart(product);
+                  navFunction();
+                }}
                 className="flex items-center gap-2 bg-primary text-white btn w-fit rounded-[32px]"
               >
                 <p className=" font-bold">Add To Cart</p>
                 <IoCartOutline size={25} />
               </button>
 
+              {/* Wishlist button */}
               <button
-                onClick={() => addToWishlist(product)}
+                onClick={() => {
+                  addToWishlist(product);
+                  navFunction();
+                }}
                 className="btn btn-circle border border-[#0B0B0B1A] bg-white min-h-4 h-12 w-12 font-bold"
               >
                 <CiHeart size={25} />

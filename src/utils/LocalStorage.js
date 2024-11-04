@@ -57,3 +57,12 @@ export {
   addWishlistToLocalStorage,
   getAllWishlist,
 };
+
+// remove a coffee from local storage
+// const removeFavorite = (id) => {
+//     // get all previously saved coffee data
+//     const favorites = getAllFavorites();
+//     const remaining = favorites.filter((coffee) => coffee.id != id);
+//     localStorage.setItem("favorites", JSON.stringify(remaining));
+//     toast.success("Successfully Removed!");
+//   };

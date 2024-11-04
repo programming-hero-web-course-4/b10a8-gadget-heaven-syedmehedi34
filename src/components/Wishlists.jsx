@@ -57,7 +57,10 @@ const Wishlists = () => {
                 {wishlist.price}
               </h3>
               <button
-                onClick={() => handleAddToCart(wishlist)}
+                onClick={() => {
+                  handleAddToCart(wishlist);
+                  navFunction();
+                }}
                 className="btn rounded-[32px] text-white bg-primary font-[500]"
               >
                 Add to Cart

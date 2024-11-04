@@ -8,7 +8,7 @@ import { NavContext } from "../layouts/Layout";
 const Navbar = () => {
   // context api
   const clicked = useContext(NavContext);
-  console.log(clicked.clicked);
+  // console.log(clicked.clicked);
   // contextFunction();
   //
   const [cart, setCart] = useState([]);

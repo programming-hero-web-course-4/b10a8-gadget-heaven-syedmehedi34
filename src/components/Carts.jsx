@@ -3,9 +3,10 @@ import { BiSort } from "react-icons/bi";
 import { getAllCarts, removeCarts } from "../utils/LocalStorage";
 import { MdDelete } from "react-icons/md";
 import { NavContext } from "../layouts/Layout";
+import { useNavigate } from "react-router-dom";
 
 const Carts = () => {
-  const { navFunction } = useContext(NavContext);
+  const { navFunction, clicked } = useContext(NavContext);
 
   const [totalPrice, setTotalPrice] = useState();
 
@@ -15,7 +16,7 @@ const Carts = () => {
     setCarts(cart);
     const total = cart.reduce((sum, item) => sum + item.price, 0);
     setTotalPrice(total.toFixed(2));
-  }, []);
+  }, [clicked]);
 
   const handleRemove = (id) => {
     removeCarts(id.product_id);
@@ -27,11 +28,20 @@ const Carts = () => {
 
   // sort by price
   function sortByPriceDescending() {
-    // console.log("hello");
     const sorted = [...carts].sort((a, b) => b.price - a.price);
-    console.log(sorted);
     setCarts(sorted);
   }
+
+  // purchase button lc work
+  function removeItemFromLocalStorage() {
+    localStorage.removeItem("cart");
+  }
+
+  // modal close button and go to home
+  const navigate = useNavigate();
+  const handleGoToHome = () => {
+    navigate("/");
+  };
 
   //
   return (
@@ -48,12 +58,18 @@ const Carts = () => {
             <BiSort size={20} />
           </button>
 
+          {/*  */}
           <button
-            onClick={() => document.getElementById("my_modal_1").showModal()}
+            onClick={() => {
+              document.getElementById("my_modal_1").showModal();
+              removeItemFromLocalStorage();
+              navFunction();
+            }}
             className="flex items-center gap-1 bg-primary text-white btn rounded-[32px] font-bold"
           >
             Purchase
           </button>
+          {/*  */}
         </div>
       </div>
 
@@ -112,7 +128,12 @@ const Carts = () => {
           <div className="modal-action w-full">
             <form method="dialog" className="w-full">
               {/* if there is a button in form, it will close the modal */}
-              <button className="btn rounded-[32px] w-full">Close</button>
+              <button
+                onClick={handleGoToHome}
+                className="btn rounded-[32px] w-full"
+              >
+                Close
+              </button>
             </form>
           </div>
         </div>

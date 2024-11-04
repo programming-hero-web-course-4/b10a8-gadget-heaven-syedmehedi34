@@ -38,9 +38,9 @@ const ProductDetails = () => {
   // onClick button
   // const [] = useState();
   const handleAddToCart = (product) => {
-    // console.log(product);
     addCartToLocalStorage(product);
   };
+
   const addToWishlist = (product) => {
     addWishlistToLocalStorage(product);
     setIsWish(true);

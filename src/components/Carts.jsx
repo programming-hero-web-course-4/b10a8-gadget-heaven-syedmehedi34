@@ -65,7 +65,7 @@ const Carts = () => {
           >
             <div className="h-full">
               <img
-                className="w-36 h-24 object-cover"
+                className="w-36 h-24 object-cover rounded-xl"
                 src={cart.product_image}
                 alt=""
               />

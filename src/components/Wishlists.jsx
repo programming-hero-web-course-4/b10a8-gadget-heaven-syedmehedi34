@@ -1,5 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { getAllWishlist, removeWishlist } from "../utils/LocalStorage";
+import {
+  addCartToLocalStorage,
+  getAllWishlist,
+  removeWishlist,
+} from "../utils/LocalStorage";
 import { MdDelete } from "react-icons/md";
 import { NavContext } from "../layouts/Layout";
 
@@ -19,6 +23,11 @@ const Wishlists = () => {
   };
 
   //
+  const handleAddToCart = (product) => {
+    addCartToLocalStorage(product);
+  };
+
+  //
   return (
     <div className="">
       <div className="w-11/12 mx-auto flex items-center justify-between py-12">
@@ -33,7 +42,7 @@ const Wishlists = () => {
           >
             <div className="h-full">
               <img
-                className="w-36 h-24 object-cover"
+                className="w-48 h-[150px] object-cover rounded-xl"
                 src={wishlist.product_image}
                 alt=""
               />
@@ -47,6 +56,12 @@ const Wishlists = () => {
               <h3 className="text-lg font-[600] text-textOF80">
                 {wishlist.price}
               </h3>
+              <button
+                onClick={() => handleAddToCart(wishlist)}
+                className="btn rounded-[32px] text-white bg-primary font-[500]"
+              >
+                Add to Cart
+              </button>
             </div>
 
             <div
@@ -56,7 +71,7 @@ const Wishlists = () => {
               }}
               className="btn btn-circle bg-inherit border-none"
             >
-              <MdDelete size={22}></MdDelete>
+              <MdDelete size={27}></MdDelete>
             </div>
           </div>
         ))}

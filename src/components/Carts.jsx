@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { BiSort } from "react-icons/bi";
-import { getAllCarts } from "../utils/LocalStorage";
+import { getAllCarts, removeCarts } from "../utils/LocalStorage";
 import { MdDelete } from "react-icons/md";
 
 const Carts = () => {
@@ -9,6 +9,12 @@ const Carts = () => {
     const cart = getAllCarts();
     setCarts(cart);
   }, []);
+
+  const handleRemove = (id) => {
+    removeCarts(id);
+    const cart = getAllCarts();
+    setCarts(cart);
+  };
 
   //
   return (
@@ -50,7 +56,10 @@ const Carts = () => {
               <h3 className="text-lg font-[600] text-textOF80">{cart.price}</h3>
             </div>
 
-            <div className="btn btn-circle bg-inherit border-none">
+            <div
+              onClick={() => handleRemove(cart.product_id)}
+              className="btn btn-circle bg-inherit border-none"
+            >
               <MdDelete size={22}></MdDelete>
             </div>
           </div>

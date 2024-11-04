@@ -4,7 +4,6 @@ import { CiHeart } from "react-icons/ci";
 
 import { useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import Heaven from "../components/Heaven";
 import {
   addCartToLocalStorage,
   addWishlistToLocalStorage,
@@ -129,7 +128,6 @@ const ProductDetails = () => {
         </div>
         {/*  */}
       </div>
-      <Heaven></Heaven>
     </div>
   );
 };

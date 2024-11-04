@@ -23,6 +23,13 @@ const addCartToLocalStorage = (product) => {
   localStorage.setItem("cart", JSON.stringify(carts));
   toast.success("Successfully added to cart!");
 };
+const removeCarts = (id) => {
+  // get all previously saved coffee data
+  const localCarts = getAllCarts();
+  const remaining = localCarts.filter((product) => product.product_id != id);
+  localStorage.setItem("cart", JSON.stringify(remaining));
+  toast.success("Successfully Removed!");
+};
 
 //------------------------------
 // wishlist
@@ -66,6 +73,7 @@ export {
   addWishlistToLocalStorage,
   getAllWishlist,
   removeWishlist,
+  removeCarts,
 };
 
 // remove a coffee from local storage

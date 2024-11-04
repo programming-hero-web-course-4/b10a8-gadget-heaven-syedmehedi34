@@ -7,17 +7,30 @@ import { NavContext } from "../layouts/Layout";
 const Carts = () => {
   const { navFunction } = useContext(NavContext);
 
+  const [totalPrice, setTotalPrice] = useState();
+
   const [carts, setCarts] = useState([]);
   useEffect(() => {
     const cart = getAllCarts();
     setCarts(cart);
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    setTotalPrice(total.toFixed(2));
   }, []);
 
   const handleRemove = (id) => {
-    removeCarts(id);
+    removeCarts(id.product_id);
     const cart = getAllCarts();
     setCarts(cart);
+    setTotalPrice(totalPrice - id.price);
   };
+
+  // sort by price
+  function sortByPriceDescending() {
+    // console.log("hello");
+    const sorted = [...carts].sort((a, b) => b.price - a.price);
+    console.log(sorted);
+    setCarts(sorted);
+  }
 
   //
   return (
@@ -25,8 +38,11 @@ const Carts = () => {
       <div className="w-11/12 mx-auto flex items-center justify-between py-12">
         <h3 className="text-2xl font-bold text-titleOB">Cart</h3>
         <div className="flex items-center gap-4">
-          <p className="mr-2 font-bold">Total cost: </p>
-          <button className="flex items-center gap-1 border border-primary text-primary btn rounded-[32px] bg-inherit">
+          <p className="mr-2 font-bold">Total price: {totalPrice}</p>
+          <button
+            onClick={() => sortByPriceDescending()}
+            className="flex items-center gap-1 border border-primary text-primary btn rounded-[32px] bg-inherit"
+          >
             <p className="font-bold">Sort by Price</p>
             <BiSort size={20} />
           </button>
@@ -64,7 +80,7 @@ const Carts = () => {
 
             <div
               onClick={() => {
-                handleRemove(cart.product_id);
+                handleRemove(cart);
                 navFunction();
               }}
               className="btn btn-circle bg-inherit border-none"

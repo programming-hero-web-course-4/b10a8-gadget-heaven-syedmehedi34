@@ -7,25 +7,32 @@ import { useLoaderData, useParams } from "react-router-dom";
 import {
   addCartToLocalStorage,
   addWishlistToLocalStorage,
+  getAllWishlist,
 } from "../utils/LocalStorage";
 import { NavContext } from "../layouts/Layout";
 
 const ProductDetails = () => {
+  const [isWish, setIsWish] = useState(false);
+
   // context
   const { navFunction } = useContext(NavContext);
-  // console.log(navFunction);
-  // const handleClick = () => {
-  //   // Call the function from context
-  //   navFunction();
-  // };
 
   //
   const { productId } = useParams();
   const data = useLoaderData();
   const [product, setProduct] = useState([]);
+
   useEffect(() => {
     const singleData = data.find((product) => product.product_id == productId);
     setProduct(singleData);
+
+    const btnWish = getAllWishlist();
+    const isExist = btnWish.find(
+      (item) => item.product_id == singleData.product_id
+    );
+    if (isExist) {
+      setIsWish(true);
+    }
   }, [data, productId]);
 
   // onClick button
@@ -36,6 +43,7 @@ const ProductDetails = () => {
   };
   const addToWishlist = (product) => {
     addWishlistToLocalStorage(product);
+    setIsWish(true);
   };
 
   //
@@ -145,7 +153,8 @@ const ProductDetails = () => {
                   addToWishlist(product);
                   navFunction();
                 }}
-                className="btn btn-circle border border-[#0B0B0B1A] bg-white min-h-4 h-12 w-12 font-bold"
+                disabled={isWish}
+                className={`btn  btn-circle border border-[#0B0B0B1A] bg-white min-h-4 h-12 w-12 font-bold btn-disabled}`}
               >
                 <CiHeart size={25} />
               </button>

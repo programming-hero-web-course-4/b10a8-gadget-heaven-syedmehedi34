@@ -10,6 +10,7 @@ import {
   getAllWishlist,
 } from "../utils/LocalStorage";
 import { NavContext } from "../layouts/Layout";
+import { Helmet } from "react-helmet-async";
 
 const ProductDetails = () => {
   const [isWish, setIsWish] = useState(false);
@@ -50,6 +51,9 @@ const ProductDetails = () => {
   //
   return (
     <div className="">
+      <Helmet>
+        <title>Products -Gadget Heaven</title>
+      </Helmet>
       <div className="text-center pt-8 pb-64 bg-primary">
         <h1 className="text-[28px] font-bold text-white">Product Details</h1>
         <p className="text-white w-2/3 mx-auto mt-4">

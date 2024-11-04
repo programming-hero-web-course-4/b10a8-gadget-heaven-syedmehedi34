@@ -2,12 +2,16 @@ import { Outlet, useLoaderData } from "react-router-dom";
 import Hero from "../components/Hero";
 import Categories from "../components/Categories";
 import HeroTitle from "../components/HeroTitle";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const categories = useLoaderData();
 
   return (
     <div className="bg-[#F7F7F7]">
+      <Helmet>
+        <title>Home -Gadget Heaven</title>
+      </Helmet>
       <Hero></Hero>
       <HeroTitle></HeroTitle>
 

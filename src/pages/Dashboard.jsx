@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 
 const Dashboard = () => {
@@ -9,6 +10,9 @@ const Dashboard = () => {
   //
   return (
     <div>
+      <Helmet>
+        <title>Dashboard -Gadget Heaven</title>
+      </Helmet>
       <div className="bg-primary py-10">
         <h1 className="text-[28px] font-bold text-center text-white mb-4">
           Dashboard

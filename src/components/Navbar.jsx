@@ -8,17 +8,9 @@ import { NavContext } from "../layouts/Layout";
 const Navbar = () => {
   // context api
   const clicked = useContext(NavContext);
-  // console.log(clicked.clicked);
-  // contextFunction();
-  //
+
   const [cart, setCart] = useState([]);
   const [wishlist, setWishlist] = useState([]);
-
-  // Function to refresh data manually
-  // const refreshData = () => {
-  //   setCart(getAllCarts());
-  //   setWishlist(getAllWishlist());
-  // };
 
   useEffect(() => {
     setCart(getAllCarts());

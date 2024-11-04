@@ -1,6 +1,6 @@
 import { HiShoppingCart } from "react-icons/hi";
 import { FaHeart } from "react-icons/fa6";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const navItems = (
@@ -17,18 +17,20 @@ const Navbar = () => {
     </>
   );
 
-  // const location = useLocation();
-  // console.log(location.pathname);
-  // ${
-  //   location.pathname != "/" ? "" : "mt-10"
-  // }
+  const location = useLocation();
 
   return (
     <div>
       <div
-        className={` w-11/12 mx-auto border border-b-0 px-1 pt-1 mt-5 rounded-t-[32px]`}
+        className={` w-11/12 mx-auto ${
+          location.pathname == "/" ? "border border-b-0 mt-5" : ""
+        }  border-b-0 px-1 pt-1  rounded-t-[32px]`}
       >
-        <div className="navbar  bg-primary rounded-t-[32px]">
+        <div
+          className={`navbar   ${
+            location.pathname == "/" ? "bg-primary rounded-t-[32px]" : ""
+          }`}
+        >
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -53,16 +55,27 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow text-white font-semibold"
+                className={`menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow  font-semibold ${
+                  location.pathname == "/" ? "text-white" : "text-titleOB70"
+                }`}
               >
                 {navItems}
               </ul>
             </div>
-            <a className="btn btn-ghost text-2xl font-bold text-white hover:bg-inherit">
+            <Link
+              to="/"
+              className={`btn btn-ghost text-2xl font-bold  hover:bg-inherit ${
+                location.pathname == "/" ? "text-white" : "text-titleOB"
+              }`}
+            >
               Gadget Heaven
-            </a>
+            </Link>
           </div>
-          <div className="navbar-center hidden lg:flex text-white font-semibold">
+          <div
+            className={`navbar-center hidden lg:flex font-semibold ${
+              location.pathname == "/" ? "text-white" : "text-titleOB70"
+            }`}
+          >
             <ul className="menu menu-horizontal px-1">{navItems}</ul>
           </div>
           <div className="navbar-end gap-2">

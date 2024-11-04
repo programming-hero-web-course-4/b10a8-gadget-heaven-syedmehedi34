@@ -21,7 +21,8 @@ const Carts = () => {
     removeCarts(id.product_id);
     const cart = getAllCarts();
     setCarts(cart);
-    setTotalPrice(totalPrice - id.price);
+    const newPrice = totalPrice - id.price;
+    setTotalPrice(newPrice.toFixed(2));
   };
 
   // sort by price

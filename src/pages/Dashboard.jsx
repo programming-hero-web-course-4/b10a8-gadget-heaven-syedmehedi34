@@ -1,6 +1,11 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 
 const Dashboard = () => {
+  const location = useLocation();
+  const isCartActive =
+    location.pathname === "/dashboard/Cart" ||
+    (location.pathname !== "/dashboard/Wishlist" &&
+      location.pathname.startsWith("/dashboard"));
   //
   return (
     <div>
@@ -15,13 +20,21 @@ const Dashboard = () => {
         <div className="flex items-center justify-center gap-5">
           <NavLink
             to="/dashboard/Cart"
-            className="py-2 border w-32 text-center rounded-[32px] click"
+            className={({ isActive }) =>
+              isActive || isCartActive
+                ? "py-2 border w-32 text-center rounded-[32px] click text-primary font-[600] bg-white"
+                : "py-2 border w-32 text-center rounded-[32px] text-white click"
+            }
           >
             Cart
           </NavLink>
           <NavLink
             to="/dashboard/Wishlist"
-            className="py-2 border w-32 text-center rounded-[32px] click"
+            className={({ isActive }) =>
+              isActive
+                ? "py-2 border w-32 text-center rounded-[32px] click text-primary font-[600] bg-white"
+                : "py-2 border w-32 text-center rounded-[32px] text-white click"
+            }
           >
             Wishlist
           </NavLink>

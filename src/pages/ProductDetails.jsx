@@ -57,8 +57,14 @@ const ProductDetails = () => {
             <h3 className="text-textOF80 text-xl font-[600] mt-3 mb-4">
               Price : {product.price} $
             </h3>
-            <div className="badge py-1 px-3 text-[#309C08] border-[#309C08] bg-[#309C081A]">
-              In Stock
+            <div
+              className={`badge py-1 px-3  ${
+                product.availability
+                  ? "text-[#309C08] border-[#309C08] bg-[#309C081A]"
+                  : "text-red-600 bg-red-50 border-red-200"
+              }`}
+            >
+              {product.availability ? "In Stock" : "Not Available"}
             </div>
 
             <p className="text-textOF60 my-4">{product.description}</p>
@@ -84,17 +90,17 @@ const ProductDetails = () => {
                     type="radio"
                     name="rating-2"
                     className="mask mask-star-2 bg-orange-400"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-2"
+                    className="mask mask-star-2 bg-orange-400"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-2"
+                    className="mask mask-star-2 bg-orange-400"
                     defaultChecked
-                  />
-                  <input
-                    type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-orange-400"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-orange-400"
                   />
                   <input
                     type="radio"

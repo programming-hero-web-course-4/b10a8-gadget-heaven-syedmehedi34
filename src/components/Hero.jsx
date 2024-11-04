@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import bannerImg from "/assets/banner.jpg";
 const Hero = () => {
   return (
@@ -13,9 +14,11 @@ const Hero = () => {
             it all!
           </p>
           <div className="w-fit mx-auto mt-7 pb-[230px]">
-            <button className="rounded-[32px] btn text-primary font-bold bg-white">
-              Shop Now
-            </button>
+            <Link to="/dashboard">
+              <button className="rounded-[32px] btn text-primary font-bold bg-white">
+                Shop Now
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import ProductContainer from "../components/ProductContainer";
 import ProductDetails from "../pages/ProductDetails";
 import Carts from "../components/Carts";
 import Wishlists from "../components/Wishlists";
+import Blogs from "../pages/Blogs";
 
 const routes = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const routes = createBrowserRouter([
       {
         path: "/statistics",
         element: <Statistics></Statistics>,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
       },
       {
         path: "/dashboard",

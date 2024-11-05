@@ -14,10 +14,17 @@ const Carts = () => {
   useEffect(() => {
     const cart = getAllCarts();
     setCarts(cart);
-    const total = cart.reduce((sum, item) => sum + item.price, 0);
-    setTotalPrice(total.toFixed(2));
+    // const total = cart.reduce((sum, item) => sum + item.price, 0);
+    // setTotalPrice(total.toFixed(2));
   }, [clicked]);
+  //
 
+  useEffect(() => {
+    const priceCart = getAllCarts();
+    const total = priceCart.reduce((sum, item) => sum + item.price, 0);
+    setTotalPrice(total.toFixed(2));
+  }, []);
+  //
   const handleRemove = (id) => {
     removeCarts(id.product_id);
     const cart = getAllCarts();
@@ -43,13 +50,21 @@ const Carts = () => {
     navigate("/");
   };
 
+  // purchaseClicked
+  const [purchaseClick, setPurchaseClick] = useState(false);
+  const purchaseClicked = () => {
+    setPurchaseClick(!purchaseClick);
+  };
+
   //
   return (
     <div>
       <div className="w-11/12 mx-auto flex items-center justify-between py-12">
         <h3 className="text-2xl font-bold text-titleOB">Cart</h3>
         <div className="flex items-center gap-4">
-          <p className="mr-2 font-bold">Total price: {totalPrice}</p>
+          <p className="mr-2 font-bold">
+            Total Price: {purchaseClick ? "0.00" : `${totalPrice}`}
+          </p>
           <button
             onClick={() => sortByPriceDescending()}
             className="flex items-center gap-1 border border-primary text-primary btn rounded-[32px] bg-inherit"
@@ -64,8 +79,10 @@ const Carts = () => {
               document.getElementById("my_modal_1").showModal();
               removeItemFromLocalStorage();
               navFunction();
+              purchaseClicked();
             }}
             className="flex items-center gap-1 bg-primary text-white btn rounded-[32px] font-bold"
+            disabled={totalPrice == 0 ? true : false}
           >
             Purchase
           </button>
@@ -121,7 +138,7 @@ const Carts = () => {
               Thanks for purchasing.
             </p>
             <p className=" text-textOF60 font-[500] text-center">
-              Total: 2449.96
+              Total: {totalPrice}
             </p>
           </div>
 
@@ -129,7 +146,10 @@ const Carts = () => {
             <form method="dialog" className="w-full">
               {/* if there is a button in form, it will close the modal */}
               <button
-                onClick={handleGoToHome}
+                // onClick={handleGoToHome}
+                onClick={() => {
+                  handleGoToHome();
+                }}
                 className="btn rounded-[32px] w-full"
               >
                 Close

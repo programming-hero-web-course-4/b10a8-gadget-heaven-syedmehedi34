@@ -129,7 +129,7 @@ const Navbar = () => {
             </div>
             <Link
               to="/"
-              className={`btn btn-ghost text-2xl font-bold  hover:bg-inherit ${
+              className={`btn btn-ghost text-[18px] md:text-2xl max-[395px]:text-sm font-bold  hover:bg-inherit  ${
                 isCategoryPage(location.pathname)
                   ? "text-white"
                   : "text-titleOB"
@@ -153,25 +153,29 @@ const Navbar = () => {
             }`}
           >
             {/* cart nav  */}
-            <div className="relative btn btn-circle border border-[#0B0B0B1A] bg-white min-h-4 h-10 w-10">
-              <p>
-                <HiShoppingCart />
-              </p>
-              <span className="absolute -top-2 -right-3 badge text-red-400">
-                {cart.length}
-              </span>
-            </div>
+            <Link to="/dashboard/Cart">
+              <div className="relative btn btn-circle border border-[#0B0B0B1A] bg-white min-h-0 h-8 w-8 md:h-10 md:w-10">
+                <p>
+                  <HiShoppingCart size={20} />
+                </p>
+                <span className="absolute -top-2 -right-3 badge text-red-400 text-[9px] md:text-sm">
+                  {cart.length}
+                </span>
+              </div>
+            </Link>
             {/* cart nav  */}
 
             {/* wishlist nav  */}
-            <div className="relative btn btn-circle border border-[#0B0B0B1A] bg-white min-h-4 h-10 w-10">
-              <p>
-                <FaHeart />
-              </p>
-              <span className="absolute -top-2 -right-3 badge text-red-400">
-                {wishlist.length}
-              </span>
-            </div>
+            <Link to="/dashboard/Wishlist">
+              <div className="relative btn btn-circle border border-[#0B0B0B1A] bg-white min-h-0 h-8 w-8 md:h-10 md:w-10">
+                <p>
+                  <FaHeart size={18} />
+                </p>
+                <span className="absolute -top-2 -right-3 badge text-red-400 text-[9px] md:text-sm">
+                  {wishlist.length}
+                </span>
+              </div>
+            </Link>
             {/* wishlist nav  */}
           </div>
         </div>

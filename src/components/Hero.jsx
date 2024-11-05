@@ -3,7 +3,7 @@ import bannerImg from "/assets/banner.jpg";
 const Hero = () => {
   return (
     <div className="relative mb-64">
-      <div className="w-11/12 mx-auto px-1 pb-1 border border-t-0 rounded-b-[32px]">
+      <div className="mx-5 mx-auto px-1 pb-1 border border-t-0 rounded-b-[32px]">
         <div className="bg-primary h-full rounded-b-[32px]">
           <h1 className="text-[46px] font-bold text-center text-white w-3/4 mx-auto pt-7">
             Upgrade Your Tech Accessorize with Gadget Heaven Accessories

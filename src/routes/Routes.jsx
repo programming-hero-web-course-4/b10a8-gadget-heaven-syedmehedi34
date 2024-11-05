@@ -34,15 +34,6 @@ const routes = createBrowserRouter([
         ],
       },
       {
-        path: "/statistics",
-        loader: () => fetch("../products.json"),
-        element: <Statistics></Statistics>,
-      },
-      {
-        path: "/blogs",
-        element: <Blogs></Blogs>,
-      },
-      {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
         children: [
@@ -60,6 +51,16 @@ const routes = createBrowserRouter([
           },
         ],
       },
+      {
+        path: "/statistics",
+        loader: () => fetch("../products.json"),
+        element: <Statistics></Statistics>,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
+      },
+
       {
         path: "/product/:productId",
         loader: () => fetch("/products.json"),

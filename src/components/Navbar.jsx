@@ -19,10 +19,16 @@ const Navbar = () => {
 
   // console.log(cart.length);
   //
+
   const navItems = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : "")}
+          to="/"
+        >
+          Home
+        </NavLink>
       </li>
       <li>
         <NavLink to="/dashboard">Dashboard</NavLink>
@@ -35,19 +41,57 @@ const Navbar = () => {
       </li>
     </>
   );
+  const categoryPaths = new Set([
+    "/",
+    "/category/All",
+    "/category/Laptop",
+    "/category/Phone",
+    "/category/Accessories",
+    "/category/Smartwatch",
+  ]);
+  const isCategoryPage = (path) => categoryPaths.has(path);
 
   const location = useLocation();
 
   return (
     <div>
+      <style>
+        {`
+          .active {
+           
+            ${
+              isCategoryPage(location.pathname)
+                ? "color: white !important;"
+                : "color: #9538E2 !important;"
+            }
+            font-weight: 800 !important;
+
+            ${
+              isCategoryPage(location.pathname)
+                ? "background-color: inherit !important;"
+                : "background-color: inherit !important;"
+            }
+              ${
+                isCategoryPage(location.pathname)
+                  ? "text-decoration: underline; !important"
+                  : ""
+              }
+ 
+        `}
+      </style>
+
       <div
-        className={` w-11/12 mx-auto ${
-          location.pathname == "/" ? "border border-b-0 mt-5" : ""
-        }  border-b-0 px-1 pt-1  rounded-t-[32px]`}
+        className={` ${
+          isCategoryPage(location.pathname)
+            ? "border border-b-0 mt-5 mx-5 "
+            : "w-11/12 mx-auto"
+        } border-b-0 px-1 pt-1 rounded-t-[32px]`}
       >
         <div
-          className={`navbar   ${
-            location.pathname == "/" ? "bg-primary rounded-t-[32px]" : ""
+          className={`navbar  ${
+            isCategoryPage(location.pathname)
+              ? "bg-primary rounded-t-[32px]"
+              : ""
           }`}
         >
           <div className="navbar-start">
@@ -75,7 +119,9 @@ const Navbar = () => {
               <ul
                 tabIndex={0}
                 className={`menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow  font-semibold ${
-                  location.pathname == "/" ? "text-white" : "text-titleOB70"
+                  isCategoryPage(location.pathname)
+                    ? "text-white"
+                    : "text-titleOB70"
                 }`}
               >
                 {navItems}
@@ -84,7 +130,9 @@ const Navbar = () => {
             <Link
               to="/"
               className={`btn btn-ghost text-2xl font-bold  hover:bg-inherit ${
-                location.pathname == "/" ? "text-white" : "text-titleOB"
+                isCategoryPage(location.pathname)
+                  ? "text-white"
+                  : "text-titleOB"
               }`}
             >
               Gadget Heaven
@@ -92,12 +140,18 @@ const Navbar = () => {
           </div>
           <div
             className={`navbar-center hidden lg:flex font-semibold ${
-              location.pathname == "/" ? "text-white" : "text-titleOB70"
+              isCategoryPage(location.pathname)
+                ? "text-white"
+                : "text-titleOB70"
             }`}
           >
             <ul className="menu menu-horizontal px-1">{navItems}</ul>
           </div>
-          <div className="navbar-end gap-3">
+          <div
+            className={`navbar-end gap-3 ${
+              isCategoryPage(location.pathname) ? "mr-7" : ""
+            }`}
+          >
             {/* cart nav  */}
             <div className="relative btn btn-circle border border-[#0B0B0B1A] bg-white min-h-4 h-10 w-10">
               <p>

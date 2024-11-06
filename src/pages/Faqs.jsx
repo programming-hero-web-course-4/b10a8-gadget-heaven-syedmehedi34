@@ -51,7 +51,7 @@ const Faqs = () => {
           </div>
 
           <div className="collapse collapse-arrow join-item border-base-300 border">
-            <input type="radio" name="my-accordion-4" defaultChecked />
+            <input type="radio" name="my-accordion-4" />
             <div className="collapse-title text-xl font-medium">
               4. Do you offer any warranties on the products?
             </div>
@@ -65,7 +65,7 @@ const Faqs = () => {
           </div>
 
           <div className="collapse collapse-arrow join-item border-base-300 border">
-            <input type="radio" name="my-accordion-4" defaultChecked />
+            <input type="radio" name="my-accordion-4" />
             <div className="collapse-title text-xl font-medium">
               5. How can I contact customer support?
             </div>

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 

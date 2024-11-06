@@ -26,7 +26,6 @@ const Home = () => {
             ))}
           </div>
         </div>
-
         <div className="">
           <Outlet></Outlet>
         </div>

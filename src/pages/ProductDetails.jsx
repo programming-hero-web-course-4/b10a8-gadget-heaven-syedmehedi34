@@ -66,8 +66,8 @@ const ProductDetails = () => {
         <div className="h-[550px] bg-[#F7F7F7]"></div>
 
         {/*  */}
-        <div className="bg-white  w-10/12 top-0 absolute transform left-1/2 -translate-x-1/2 -translate-y-[35%] rounded-3xl flex gap-8 p-7">
-          <div className="w-2/5 bg-[#ECECEC] flex">
+        <div className="bg-white  w-10/12 top-0 absolute transform left-1/2 -translate-x-1/2 md:-translate-y-[35%] -translate-y-[25%] rounded-3xl flex max-[768px]:flex-col gap-8 p-7">
+          <div className="max-h-[500px] w-2/5 bg-[#ECECEC] flex rounded-2xl">
             <img
               className="object-cover rounded-2xl"
               src={product.product_image}

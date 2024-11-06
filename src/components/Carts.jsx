@@ -90,11 +90,11 @@ const Carts = () => {
         </div>
       </div>
 
-      <div className="mt-8 w-11/12 mx-auto space-y-4">
+      <div className="mt-8 w-11/12 mx-auto space-y-4 ">
         {carts.map((cart) => (
           <div
             key={cart.product_id}
-            className="bg-white p-6 rounded-2xl flex items-center gap-6"
+            className="bg-white p-6 rounded-2xl flex items-center gap-6 shadow-lg"
           >
             <div className="h-full">
               <img
@@ -105,10 +105,12 @@ const Carts = () => {
             </div>
 
             <div className="flex-grow space-y-2">
-              <h1 className="text-textOF text-xl font-[600]">
+              <h1 className="text-textOF md:text-xl font-[600]">
                 {cart.product_name}
               </h1>
-              <p className="text-textOF60">{cart.description}</p>
+              <p className="text-textOF60 text-sm md:text-base">
+                {cart.description}
+              </p>
               <h3 className="text-lg font-[600] text-textOF80">{cart.price}</h3>
             </div>
 

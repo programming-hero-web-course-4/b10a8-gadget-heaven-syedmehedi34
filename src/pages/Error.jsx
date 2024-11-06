@@ -34,12 +34,13 @@ const Error = () => {
                   style={{
                     color: "#fff",
                     padding: "10px 20px",
-                    background: "#39ac31",
+                    background: "#9538E2",
                     margin: "20px 0",
                     display: "inline-block",
                     textDecoration: "none",
                     borderRadius: "4px",
                   }}
+                  className="click"
                 >
                   Go to Home
                 </Link>

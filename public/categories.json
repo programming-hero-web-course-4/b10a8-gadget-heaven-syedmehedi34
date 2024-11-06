@@ -23,5 +23,10 @@
     "category_id": 4,
     "category": "Smartwatch",
     "slug": "smartwatch"
+  },
+  {
+    "category_id": 6,
+    "category": "iPhone",
+    "slug": "iphone"
   }
 ]

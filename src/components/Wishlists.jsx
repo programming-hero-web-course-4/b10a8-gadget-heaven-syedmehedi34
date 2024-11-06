@@ -38,7 +38,7 @@ const Wishlists = () => {
         {wishlists.map((wishlist) => (
           <div
             key={wishlist.product_id}
-            className="bg-white p-6 rounded-2xl flex items-center gap-6"
+            className="shadow-lg bg-white p-6 rounded-2xl flex items-center gap-6"
           >
             <div className="h-full">
               <img
@@ -49,10 +49,12 @@ const Wishlists = () => {
             </div>
 
             <div className="flex-grow space-y-2">
-              <h1 className="text-textOF text-xl font-[600]">
+              <h1 className="text-textOF md:text-xl font-[600]">
                 {wishlist.product_name}
               </h1>
-              <p className="text-textOF60">{wishlist.description}</p>
+              <p className="text-textOF60 text-sm md:text-base">
+                {wishlist.description}
+              </p>
               <h3 className="text-lg font-[600] text-textOF80">
                 {wishlist.price}
               </h3>

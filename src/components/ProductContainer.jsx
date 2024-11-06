@@ -24,13 +24,22 @@ const ProductContainer = () => {
   //
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20 ">
         {products && products.length > 0 ? (
           products.map((product) => (
             <Product key={product.product_id} product={product} />
           ))
         ) : (
-          <p>No products available.</p>
+          <div className="w-full">
+            <div className="">
+              <div className="">
+                <img className="w-fit" src="/no-products.svg" alt="" />
+              </div>
+              <p className="text-center text-textOF font-semibold text-xl">
+                Sorry! No product found
+              </p>
+            </div>
+          </div>
         )}
       </div>
     </div>

@@ -15,7 +15,7 @@ const Home = () => {
       <Hero></Hero>
       <HeroTitle></HeroTitle>
 
-      <div className="w-11/12 mx-auto gap-6 flex max-[1024px]:flex-col">
+      <div className="w-11/12 mx-auto gap-6 flex max-[1024px]:flex-col pb-12">
         <div className="min-[1150px]:w-[22%] min-[1024px]:w-[30%] w-full">
           <div className="w-full border border-[#09080F1A] rounded-2xl bg-white p-6 grid max-[450px]:grid-cols-2 grid-cols-3 md:grid-cols-5 lg:grid-cols-1  gap-4 shadow-sm">
             {categories.map((category) => (

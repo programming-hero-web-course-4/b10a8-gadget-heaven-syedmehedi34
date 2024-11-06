@@ -19,7 +19,7 @@ const Product = ({ product }) => {
   } = product;
 
   return (
-    <div className=" rounded-2xl bg-white p-5 shadow-sm">
+    <div className=" rounded-2xl bg-white p-5 shadow-sm flex flex-col">
       <div className="w-full rounded-xl h-[200px]">
         <img
           className="w-full rounded-xl h-[200px] object-cover"
@@ -27,7 +27,7 @@ const Product = ({ product }) => {
           alt={product_title}
         />
       </div>
-      <h1 className="text-textOF text-[22px] font-[600] mt-6 mb-3">
+      <h1 className="flex-grow text-textOF text-[22px] font-[600] mt-6 mb-3">
         {product_name}
       </h1>
       <p className="text-textOF60 text-lg font-[500]">Price : {price} $</p>

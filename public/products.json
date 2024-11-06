@@ -1,96 +1,28 @@
 [
   {
     "product_id": "P001",
-    "product_name": "Alienware X17",
-    "product_title": "Gaming Laptop",
-    "product_image": "https://i.ibb.co/HN20vm0/1.jpg",
+    "product_name": "Alienware X17 R2",
+    "product_title": "High-Performance Gaming Laptop",
+    "product_image": "https://i.ibb.co.com/3C8vk3V/1.jpg",
     "category": "Laptop",
-    "price": 1299.99,
-    "description": "High-performance gaming laptop with dedicated graphics card.",
+    "price": 1400,
+    "description": "Powerful gaming laptop with enhanced graphics and cooling system.",
     "specification": [
-      "Intel Core i7",
-      "16GB RAM",
+      "Intel Core i9",
+      "32GB RAM",
       "1TB SSD",
-      "NVIDIA GTX 3060"
-    ],
-    "availability": true,
-    "rating": 4
-  },
-  {
-    "product_id": "P002",
-    "product_name": "Samsung Galaxy S21",
-    "product_title": "Smartphone X",
-    "product_image": "https://i.ibb.co/wJrPMrK/2.jpg",
-    "category": "Phone",
-    "price": 699.99,
-    "description": "Latest smartphone with stunning camera and fast processor.",
-    "specification": [
-      "6.5-inch AMOLED display",
-      "128GB storage",
-      "5G support",
-      "Quad-camera system"
+      "NVIDIA RTX 3080"
     ],
     "availability": true,
     "rating": 5
   },
   {
-    "product_id": "P003",
-    "product_name": "Sony WF-1000XM4",
-    "product_title": "Wireless Earbuds",
-    "product_image": "https://i.ibb.co/4jDMYp3/3.jpg",
-    "category": "Accessories",
-    "price": 49.99,
-    "description": "Compact wireless earbuds with noise cancellation and long battery life.",
-    "specification": [
-      "Bluetooth 5.0",
-      "Noise cancellation",
-      "Up to 20 hours battery",
-      "Water-resistant"
-    ],
-    "availability": false,
-    "rating": 3
-  },
-  {
-    "product_id": "P004",
-    "product_name": "JBL Flip 5",
-    "product_title": "Bluetooth Speaker",
-    "product_image": "https://i.ibb.co/MVGzTkn/4.jpg",
-    "category": "Accessories",
-    "price": 29.99,
-    "description": "Portable Bluetooth speaker with impressive bass.",
-    "specification": [
-      "10-hour battery life",
-      "Waterproof",
-      "Bluetooth 4.2",
-      "Built-in microphone"
-    ],
-    "availability": false,
-    "rating": 4
-  },
-  {
-    "product_id": "P005",
-    "product_name": "Apple Watch Series 5",
-    "product_title": "Smartwatch Series 5",
-    "product_image": "https://i.ibb.co/5vcqSx3/5.jpg",
-    "category": "Smartwatch",
-    "price": 249.99,
-    "description": "Stylish smartwatch with health tracking and notifications.",
-    "specification": [
-      "Heart rate monitor",
-      "GPS tracking",
-      "Water-resistant up to 50m",
-      "Battery life up to 7 days"
-    ],
-    "availability": true,
-    "rating": 4
-  },
-  {
-    "product_id": "P006",
+    "product_id": "P002",
     "product_name": "MacBook Pro M1",
     "product_title": "MacBook Pro 16",
-    "product_image": "https://i.ibb.co/jVgCYLr/6.jpg",
-    "category": "MacBook",
-    "price": 2399.99,
+    "product_image": "https://i.ibb.co.com/0sDjnMk/2.jpg",
+    "category": "Laptop",
+    "price": 2300.5,
     "description": "Apple MacBook Pro with M1 chip, 16-inch Retina display.",
     "specification": [
       "Apple M1 chip",
@@ -102,37 +34,173 @@
     "rating": 5
   },
   {
-    "product_id": "P008",
-    "product_name": "Rain Design mStand",
-    "product_title": "Laptop Stand",
-    "product_image": "https://i.ibb.co/TP1BGWB/8.jpg",
-    "category": "Accessories",
-    "price": 19.99,
-    "description": "Adjustable laptop stand for comfortable viewing and typing.",
+    "product_id": "P003",
+    "product_name": "Dell XPS 15",
+    "product_title": "Ultra-Slim Laptop",
+    "product_image": "https://i.ibb.co.com/grtXyBs/3.webp",
+    "category": "Laptop",
+    "price": 1850,
+    "description": "Sleek, high-performance laptop with a stunning display and long battery life.",
     "specification": [
-      "Aluminum construction",
-      "Adjustable height",
-      "Fits laptops up to 17 inches",
-      "Non-slip pads"
+      "Intel Core i7",
+      "16GB RAM",
+      "512GB SSD",
+      "15.6-inch 4K UHD display"
     ],
     "availability": true,
-    "rating": 2
+    "rating": 4
+  },
+  {
+    "product_id": "P004",
+    "product_name": "HP Spectre x360",
+    "product_title": "Convertible Touchscreen Laptop",
+    "product_image": "https://i.ibb.co.com/Bn8KZF0/4.jpg",
+    "category": "Laptop",
+    "price": 1500.5,
+    "description": "Versatile laptop with touchscreen and stylus support, ideal for creative work.",
+    "specification": [
+      "Intel Core i7",
+      "16GB RAM",
+      "512GB SSD",
+      "13.3-inch FHD touchscreen"
+    ],
+    "availability": true,
+    "rating": 4
+  },
+  {
+    "product_id": "P005",
+    "product_name": "Lenovo ThinkPad X1",
+    "product_title": "Business Laptop",
+    "product_image": "https://i.ibb.co.com/CQ0v80V/5.jpg",
+    "category": "Laptop",
+    "price": 1600,
+    "description": "Robust business laptop with advanced security features.",
+    "specification": [
+      "Intel Core i7",
+      "16GB RAM",
+      "1TB SSD",
+      "14-inch FHD display"
+    ],
+    "availability": true,
+    "rating": 4
+  },
+  {
+    "product_id": "P006",
+    "product_name": "Samsung Galaxy Book Pro",
+    "product_title": "Ultra-Light Laptop",
+    "product_image": "https://i.ibb.co.com/nPtFGbX/6.webp",
+    "category": "Laptop",
+    "price": 1100,
+    "description": "Lightweight laptop with AMOLED display for brilliant visuals.",
+    "specification": [
+      "Intel Core i5",
+      "8GB RAM",
+      "512GB SSD",
+      "15.6-inch AMOLED display"
+    ],
+    "availability": true,
+    "rating": 4
+  },
+  {
+    "product_id": "P007",
+    "product_name": "iPhone 14 Pro",
+    "product_title": "Flagship Smartphone",
+    "product_image": "https://i.ibb.co.com/7G3nHw9/7.jpg",
+    "category": "Phone",
+    "price": 1050.5,
+    "description": "Apple's latest smartphone with advanced camera and powerful processor.",
+    "specification": [
+      "6.1-inch OLED display",
+      "128GB storage",
+      "5G support",
+      "Triple-camera system"
+    ],
+    "availability": true,
+    "rating": 5
+  },
+  {
+    "product_id": "P008",
+    "product_name": "Samsung Galaxy S21 Ultra",
+    "product_title": "High-End Smartphone",
+    "product_image": "https://i.ibb.co.com/m6HS0My/8.jpg",
+    "category": "Phone",
+    "price": 950,
+    "description": "Top-tier smartphone with exceptional camera and long-lasting battery.",
+    "specification": [
+      "6.8-inch AMOLED display",
+      "256GB storage",
+      "5G support",
+      "Quad-camera system"
+    ],
+    "availability": true,
+    "rating": 5
   },
   {
     "product_id": "P009",
-    "product_name": "Anker Wireless Charger",
-    "product_title": "iPhone Charging Dock",
-    "product_image": "https://i.ibb.co/ZxfMMNT/9.jpg",
+    "product_name": "Sony WH-1000XM5",
+    "product_title": "Noise-Canceling Headphones",
+    "product_image": "https://i.ibb.co.com/YNPXyMH/9.webp",
     "category": "Accessories",
-    "price": 14.99,
-    "description": "Convenient charging dock for iPhone with sturdy base.",
+    "price": 299.5,
+    "description": "High-quality wireless headphones with superior noise cancellation.",
     "specification": [
-      "Fast charging support",
-      "Non-slip base",
-      "Compatible with iPhone 8 and later",
-      "Compact design"
+      "Bluetooth 5.2",
+      "Noise cancellation",
+      "30-hour battery life",
+      "Over-ear design"
     ],
     "availability": true,
-    "rating": 3
+    "rating": 5
+  },
+  {
+    "product_id": "P010",
+    "product_name": "Bose SoundLink Revolve",
+    "product_title": "Bluetooth Speaker",
+    "product_image": "https://i.ibb.co.com/ssN5Q9c/10.png",
+    "category": "Accessories",
+    "price": 150,
+    "description": "Portable speaker with immersive sound and 360-degree coverage.",
+    "specification": [
+      "12-hour battery life",
+      "Water-resistant",
+      "Bluetooth 5.0",
+      "Built-in microphone"
+    ],
+    "availability": true,
+    "rating": 4
+  },
+  {
+    "product_id": "P011",
+    "product_name": "Apple Watch Series 8",
+    "product_title": "Advanced Smartwatch",
+    "product_image": "https://i.ibb.co.com/WtFG0fp/11.png",
+    "category": "Smartwatch",
+    "price": 450,
+    "description": "Latest Apple Watch with health monitoring and emergency SOS.",
+    "specification": [
+      "Heart rate monitor",
+      "ECG support",
+      "Water-resistant up to 50m",
+      "Battery life up to 18 hours"
+    ],
+    "availability": true,
+    "rating": 5
+  },
+  {
+    "product_id": "P012",
+    "product_name": "Fitbit Sense",
+    "product_title": "Health-Focused Smartwatch",
+    "product_image": "https://i.ibb.co.com/NNVdX8c/12.webp",
+    "category": "Smartwatch",
+    "price": 200.5,
+    "description": "Smartwatch focused on health and wellness tracking.",
+    "specification": [
+      "Stress management tools",
+      "Built-in GPS",
+      "SpO2 monitoring",
+      "Up to 6-day battery life"
+    ],
+    "availability": true,
+    "rating": 4
   }
 ]

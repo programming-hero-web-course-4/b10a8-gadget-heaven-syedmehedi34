@@ -12,7 +12,7 @@ import {
 const Statistics = () => {
   const data = useLoaderData();
   return (
-    <div className="w-11/12 mx-auto pb-44">
+    <div className=" pb-44">
       <Helmet>
         <title>Statistics -Gadget Heaven</title>
       </Helmet>

@@ -48,6 +48,7 @@ const Navbar = () => {
     "/category/Phone",
     "/category/Accessories",
     "/category/Smartwatch",
+    "/category/iPhone",
   ]);
   const isCategoryPage = (path) => categoryPaths.has(path);
 

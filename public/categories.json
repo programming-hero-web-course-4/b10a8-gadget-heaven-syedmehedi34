@@ -23,15 +23,5 @@
     "category_id": 4,
     "category": "Smartwatch",
     "slug": "smartwatch"
-  },
-  {
-    "category_id": 5,
-    "category": "MacBook",
-    "slug": "macbook"
-  },
-  {
-    "category_id": 6,
-    "category": "iPhone",
-    "slug": "iphone"
   }
 ]

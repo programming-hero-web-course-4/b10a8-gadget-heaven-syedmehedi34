@@ -7,8 +7,8 @@ import ProductContainer from "../components/ProductContainer";
 import ProductDetails from "../pages/ProductDetails";
 import Carts from "../components/Carts";
 import Wishlists from "../components/Wishlists";
-import Blogs from "../pages/Blogs";
 import Error from "../pages/Error";
+import Faqs from "../pages/Faqs";
 
 const routes = createBrowserRouter([
   {
@@ -57,8 +57,8 @@ const routes = createBrowserRouter([
         element: <Statistics></Statistics>,
       },
       {
-        path: "/blogs",
-        element: <Blogs></Blogs>,
+        path: "/faqs",
+        element: <Faqs></Faqs>,
       },
 
       {

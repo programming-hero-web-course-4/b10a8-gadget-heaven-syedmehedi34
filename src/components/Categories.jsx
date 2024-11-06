@@ -6,9 +6,9 @@ const Categories = ({ category }) => {
     <div>
       <Link
         to={`/category/${category.category}`}
-        className="text-textOF60 font-[500]"
+        className="text-textOF60 font-[500] text-sm"
       >
-        <div className="w-full bg-[#09080F0D] rounded-[32px] py-[10px] pl-5 click">
+        <div className="w-full bg-[#09080F0D] rounded-[32px] py-[10px] px-4 click">
           {category.category}
         </div>
       </Link>

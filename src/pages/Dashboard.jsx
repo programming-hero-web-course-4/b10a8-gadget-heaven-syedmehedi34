@@ -17,7 +17,7 @@ const Dashboard = () => {
         <h1 className="text-[28px] font-bold text-center text-white mb-4">
           Dashboard
         </h1>
-        <p className="text-center text-white w-3/5 mx-auto mb-7">
+        <p className="text-center text-white w-3/5 mx-auto mb-7 text-sm md:text-[1rem]">
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to the coolest accessories, we have it all!
         </p>

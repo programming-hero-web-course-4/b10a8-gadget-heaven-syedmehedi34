@@ -59,7 +59,7 @@ const Carts = () => {
   //
   return (
     <div>
-      <div className="w-11/12 mx-auto flex items-center justify-between py-12">
+      <div className="w-11/12 mx-auto flex flex-col md:flex-row md:items-center justify-between py-12">
         <h3 className="text-2xl font-bold text-titleOB">Cart</h3>
         <div className="flex items-center gap-4">
           <p className="mr-2 font-bold">
